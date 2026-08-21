@@ -333,6 +333,10 @@ h3 {
   backdrop-filter: blur(10px);
 }
 
+.project-card + .project-card {
+  margin-top: 1rem;
+}
+
 .project-identity {
   display: flex;
   gap: 1rem;
