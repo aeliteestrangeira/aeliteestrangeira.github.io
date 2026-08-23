@@ -4,9 +4,44 @@ Portfólio principal de **Kauã Silbershlach Parodes**, publicado em:
 
 <https://aeliteestrangeira.github.io/>
 
-## Arquitetura
+## Arquitetura JavaScript
 
-Este repositório contém somente o portfólio raiz. As aplicações permanecem independentes, cada uma com repositório, implantação e ciclo de evolução próprios.
+O repositório mantém a separação entre ativos, configuração, aplicação, camada web, arquivos estáticos e testes.
+
+```text
+.
+├── _build/                     # Artefato gerado
+├── assets/
+│   ├── css/app.css
+│   ├── js/app.js
+│   ├── vendor/topbar.js
+│   └── tailwind.config.js
+├── config/
+│   ├── config.js
+│   ├── dev.js
+│   ├── prod.js
+│   ├── runtime.js
+│   └── test.js
+├── lib/
+│   ├── my_app/application.js
+│   ├── my_app_web/
+│   │   ├── components/
+│   │   ├── controllers/
+│   │   ├── endpoint.js
+│   │   ├── gettext.js
+│   │   ├── router.js
+│   │   └── telemetry.js
+│   ├── my_app.js
+│   └── my_app_web.js
+├── priv/
+│   ├── gettext/
+│   └── static/
+├── test/
+├── package.json
+└── README.md
+```
+
+## Aplicações independentes
 
 | Destino | Finalidade | Repositório |
 | --- | --- | --- |
@@ -14,14 +49,13 @@ Este repositório contém somente o portfólio raiz. As aplicações permanecem 
 | [`/discord/`](https://aeliteestrangeira.github.io/discord/) | Aplicação Discord | [`discord`](https://github.com/aeliteestrangeira/discord) |
 | [`/instagram/`](https://aeliteestrangeira.github.io/instagram/) | Aplicação Instagram | [`instagram`](https://github.com/aeliteestrangeira/instagram) |
 
-## Princípios desta versão
+## Execução
 
-- HTML e CSS estáticos.
-- Nenhum JavaScript e nenhum service worker.
-- Nenhuma autenticação, banco de dados ou segredo no portfólio.
-- As aplicações são apenas referenciadas por links.
-- Publicação automática e isolada pelo GitHub Pages.
+```sh
+npm ci
+npm test
+npm run build
+npm start
+```
 
-## Publicação
-
-Alterações na branch `main` acionam o workflow `Publicar portfólio`, que publica somente a pasta `site/`.
+O workflow de GitHub Pages valida o projeto, gera `_build/` e publica somente esse artefato.

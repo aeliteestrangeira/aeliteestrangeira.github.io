@@ -25,13 +25,28 @@ jobs:
       - name: Obter repositório
         uses: actions/checkout@v6
 
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Validar
+        run: npm test
+
+      - name: Compilar
+        run: npm run build
+
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Preparar artefato estático
         uses: actions/upload-pages-artifact@v4
         with:
-          path: site
+          path: _build
 
       - name: Publicar
         id: deployment

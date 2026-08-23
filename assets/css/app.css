@@ -21,6 +21,19 @@ html {
   scroll-behavior: smooth;
 }
 
+.topbar {
+  position: fixed;
+  inset: 0 100% auto 0;
+  z-index: 200;
+  height: 3px;
+  background: var(--accent);
+  transition: right 180ms ease;
+}
+
+.topbar[data-active="true"] {
+  right: 12%;
+}
+
 body {
   min-width: 320px;
   margin: 0;

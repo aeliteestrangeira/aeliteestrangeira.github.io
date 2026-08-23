@@ -1,0 +1,14 @@
+{
+  "name": "aeliteestrangeira.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node lib/my_app/application.js --build",
+    "start": "npm run build && node lib/my_app.js",
+    "test": "node --test test/my_app_web/controllers/*_test.js"
+  }
+}
