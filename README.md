@@ -46,8 +46,6 @@ O repositório mantém a separação entre ativos, configuração, aplicação, 
 | Destino | Finalidade | Repositório |
 | --- | --- | --- |
 | [`/`](https://aeliteestrangeira.github.io/) | Portfólio principal | [`aeliteestrangeira.github.io`](https://github.com/aeliteestrangeira/aeliteestrangeira.github.io) |
-| [`/discord/`](https://aeliteestrangeira.github.io/discord/) | Aplicação Discord | [`discord`](https://github.com/aeliteestrangeira/discord) |
-| [`/instagram/`](https://aeliteestrangeira.github.io/instagram/) | Aplicação Instagram | [`instagram`](https://github.com/aeliteestrangeira/instagram) |
 
 ## Execução
 
